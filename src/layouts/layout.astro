@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions"
 import Header from '../sections/header.astro'
 import Footer from '../sections/footer.astro'
 import "@fontsource/archivo"
@@ -16,7 +15,6 @@ import "@styles/header.css"
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<meta name='generator' content={Astro.generator} />
 
-		<ViewTransitions />
 	</head>
 	<body >
     <main transition:animate='initial' class='flex flex-col justify-center bg-white'>
