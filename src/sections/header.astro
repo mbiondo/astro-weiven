@@ -1,29 +1,31 @@
 ---
-import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar"
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar"
 ---
 
-<header class='lg:flex justify-between p-5 gap-5 mx-auto container'>
-	<Astronav closeOnClick>
-		<div class='flex w-full lg:w-auto justify-between'>
-			<a class='block mt-1 hover:opacity-80'>
-				<img src='/logo.svg' width='150' height='30' alt='Weiven' />
-			</a>
-			<div class='block lg:hidden'>
-				<MenuIcon class='w-4 h-4 text-gray-800' />
+<header class='sticky z-50 top-0 bg-white w-full border shadow-lg'>
+	<div class='lg:flex justify-between p-5 gap-5 mx-auto w-4/6'>
+		<Astronav closeOnClick>
+			<div class='flex w-full lg:w-auto justify-between'>
+				<a class='block mt-1 hover:opacity-80'>
+					<img src='/logo.svg' width='150' height='30' alt='Weiven' />
+				</a>
+				<div class='block lg:hidden'>
+					<MenuIcon class='w-4 h-4 text-gray-800' />
+				</div>
 			</div>
-		</div>
-		<MenuItems class='hidden lg:flex'>
-			<ul class='flex flex-col lg:flex-row lg:gap-5'>
-				<li>
-					<a href='#services'>Servicios</a>
-				</li>
-				<li>
-					<a href='#about'>Quienes Somos</a>
-				</li>
-				<li>
-					<a href='#contact'>Contacto</a>
-				</li>
-			</ul>
-		</MenuItems>
-	</Astronav>
+			<MenuItems class='hidden lg:flex'>
+				<ul class='flex flex-col lg:flex-row lg:gap-5'>
+					<li>
+						<a href='#services'>Servicios</a>
+					</li>
+					<li>
+						<a href='#about'>Quienes Somos</a>
+					</li>
+					<li>
+						<a href='#contact'>Contacto</a>
+					</li>
+				</ul>
+			</MenuItems>
+		</Astronav>
+	</div>
 </header>
