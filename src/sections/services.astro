@@ -1,0 +1,66 @@
+---
+const services = [
+	{
+		title: "Diseño de servicios",
+		description:
+			"Tenemos la capacidad de transformar todos los procesos y servicios de una empresa u organismo rediseñándolos en función de los usuarios internos y externos a partir de la implementación tecnológica.",
+		delay: 200,
+		icon: "",
+	},
+	{
+		title: "Desarrollo de Software",
+		description:
+			"Brindamos soluciones en software y aplicaciones móviles. Somos partner de las empresas líderes en el mercado pudiendo dar soluciones con software licenciatario o software libre ofreciendo el soporte y desarrollo de software propietario de manera personalizada.",
+		delay: 400,
+		icon: "",
+	},
+	{
+		title: "Experiencia de usuario",
+		description:
+			"Diseñamos experiencias de calidad según estándares internacionales y buenas prácticas UX/IU. Contamos con servicios de aseguramiento de la calidad: QA Web (CMS, aplicaciones web, diseño, etc.), QA Mobile (aplicaciones móviles, responsive, user experience, etc.",
+		delay: 500,
+		icon: "",
+	},
+	{
+		title: "Soluciones en infraestructura",
+		description:
+			"Disponemos de las mejores soluciones tecnológicas del mercado para que nuestros clientes puedan desarrollarse y satisfacer todas sus necesidades.",
+		delay: 800,
+		icon: "",
+	},
+	{
+		title: "Blockchain",
+		description:
+			"Expertos en la aplicación y desarrollo de proyectos blockchain, criptomonedas e implementación de billeteras virtuales para gobiernos en todos sus niveles (Municipales, Provinciales y Nacionales). Abordaje tecnológico práctico con utilidad real para la gestión e implementación de políticas públicas.",
+		delay: 900,
+		icon: "",
+	},
+	{
+		title: "Smart Cities",
+		description:
+			"Diseñamos planes estratégicos y desarrollamos productos para Smart Cities. Movilidad urbana y car parking. Transformación digital de organismos públicos (Municipales, provinciales y nacionales). Seguridad inteligente.",
+		delay: 1000,
+		icon: "",
+	},
+]
+---
+
+<div class='flex flex-col px-3 py-2 bg-white md:px-0'>
+	<div class='bg-white'>
+		<div class='grid w-full max-w-6xl gap-8 py-12 mx-auto md:grid-cols-2 lg:grid-cols-3'>
+			{
+				services.map((service) => {
+					return (
+						<div class='relative px-5 pt-6 pb-4 text-left border rounded-md shadow-lg'>
+							<div class='absolute top-0 right-0 mx-3 mt-2 kush-center opacity-80'>
+								<span class='mb-3 text-4xl'>{service.icon}</span>
+							</div>
+							<h3 class='pr-16 mt-1 mb-3 text-xl font-bold text-blue-500 md:pr-0'>{service.title}</h3>
+							<p class='text-sm text-gray-900'>{service.description}</p>
+						</div>
+					)
+				})
+			}
+		</div>
+	</div>
+</div>

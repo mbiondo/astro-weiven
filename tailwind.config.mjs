@@ -4,5 +4,19 @@ export default {
 	theme: {
 		extend: {},
 	},
-	plugins: [require("@tailwindcss/typography"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/line-clamp")],
+	plugins: [
+		function ({ addUtilities }) {
+			const newUtilities = {
+				".kush-center": {
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "center",
+				},
+			}
+			addUtilities(newUtilities)
+		},
+		require("@tailwindcss/typography"),
+		require("@tailwindcss/aspect-ratio"),
+		require("@tailwindcss/line-clamp"),
+	],
 }

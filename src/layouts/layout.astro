@@ -1,9 +1,13 @@
 ---
 import { ViewTransitions } from "astro:transitions"
 import Header from '../sections/header.astro'
+import Footer from '../sections/footer.astro'
+import "@fontsource/archivo"
+import "@styles/patterns.css"
+import "@styles/global.css"
+import "@styles/header.css"
 ---
 
-<!doctype html>
 <html lang='en'>
 	<head>
 		<meta charset='UTF-8' />
@@ -15,44 +19,11 @@ import Header from '../sections/header.astro'
 		<ViewTransitions />
 	</head>
 	<body >
-        <main transition:animate='initial' class='flex flex-col justify-center bg-white  '>
-            <Header />
-			<slot />
-		</main>
+    <main transition:animate='initial' class='flex flex-col justify-center bg-white'>
+      <Header />
+	  <slot />
+	  <Footer />
+	</main>
 	</body>
 </html>
 
-<style>
-    html,
-body {
-  scroll-behavior: smooth;
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-  @apply font-sans;
-}
-
-
-*::-webkit-scrollbar {
-  width: 8px;
-}
-
-
-*::-webkit-scrollbar-track {
-  @apply bg-gray-300;
-}
-
-*::-webkit-scrollbar-thumb {
-  @apply bg-gray-800 bg-gradient-to-br from-gray-600 to-gray-800;
-}
-</style>

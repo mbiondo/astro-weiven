@@ -1,0 +1,53 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  @apply font-sans;
+}
+
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-gray-300;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-gray-800 bg-gradient-to-br from-gray-600 to-gray-800;
+}
+
+.Footer {
+  @apply flex flex-col items-center justify-center w-full pt-6 mx-auto mb-8;
+}
+
+:global(.dark) .Footer {
+}
+
+.Divider {
+  @apply w-full border border-gray-200;
+}
+
+:global(.dark) .Divider {
+  @apply border-gray-800;
+}
+
+.Grid {
+  @apply grid w-full max-w-3xl grid-cols-1 gap-4 pb-16 text-center sm:grid-cols-2;
+}
+
+.GridItem {
+  @apply flex flex-col space-y-4;
+}
