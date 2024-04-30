@@ -1,10 +1,12 @@
 ---
-import Header from '../sections/header.astro'
-import Footer from '../sections/footer.astro'
+import { ViewTransitions } from "astro:transitions"
+import Header from "../sections/header.astro"
+import Footer from "../sections/footer.astro"
 import "@fontsource/archivo"
 import "@styles/patterns.css"
 import "@styles/global.css"
 import "@styles/header.css"
+import "aos/dist/aos.css"
 ---
 
 <html lang='en'>
@@ -14,14 +16,18 @@ import "@styles/header.css"
 		<meta name='viewport' content='width=device-width' />
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<meta name='generator' content={Astro.generator} />
-
+		<ViewTransitions />
 	</head>
-	<body >
-    <main transition:animate='initial' class='flex flex-col justify-center bg-white'>
-      <Header />
-	  <slot />
-	  <Footer />
-	</main>
+	<body>
+		<script>
+			import { aosInit } from "@lib/aos"
+			aosInit()
+			document.addEventListener("astro:after-swap", aosInit)
+		</script>
+		<main transition:animate='initial' class='flex flex-col justify-center bg-white'>
+			<Header />
+			<slot />
+			<Footer />
+		</main>
 	</body>
 </html>
-
