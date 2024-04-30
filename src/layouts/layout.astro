@@ -6,15 +6,47 @@ import "@fontsource/archivo"
 import "@styles/patterns.css"
 import "@styles/global.css"
 import "aos/dist/aos.css"
+
+const { metaProps } = Astro.props
+
+const meta = {
+	title: "Weiven",
+	description: "Weiven is a creative studio that specializes in web design, development, and branding.",
+	image: "https://res.cloudinary.com/santuan/image/upload/v1625517740/weiven/static/w0xrqakdkujw3vdug93i.png",
+	type: "website",
+	...metaProps,
+}
 ---
 
 <html lang='en'>
 	<head>
+		<title>{meta.title}</title>
 		<meta charset='UTF-8' />
 		<meta name='description' content='Astro description' />
 		<meta name='viewport' content='width=device-width' />
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<meta name='generator' content={Astro.generator} />
+		<meta name='robots' content='follow, index' />
+		<meta content={meta.description} name='description' />
+		<meta property='og:url' content={`https://weiven.ar}`} />
+		<link rel='canonical' href={`https://weiven.ar`} />
+		<meta property='og:type' content={meta.type} />
+		<meta property='og:site_name' content='Weiven' />
+		<meta property='og:description' content={meta.description} />
+		<meta property='og:title' content={meta.title} />
+		<meta property='og:image' content={meta.image} />
+		<meta name='twitter:card' content='summary_large_image' />
+		<meta name='twitter:site' content='@Weiven' />
+		<meta name='twitter:title' content={meta.title} />
+		<meta name='twitter:description' content={meta.description} />
+		<meta name='twitter:image' content={meta.image} />
+		<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+		<link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+		<link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+		<link rel='manifest' href='/site.webmanifest' />
+		<link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
+		<meta name='msapplication-TileColor' content='#da532c' />
+		<meta name='theme-color' content='#ffffff' />
 		<ViewTransitions />
 	</head>
 	<body>
