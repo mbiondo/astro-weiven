@@ -1,11 +1,17 @@
+---
+import { Image } from "astro:assets"
+import WeivenObjetivesImage from "@assets/images/weiven-objectives.png"
+---
+
 <div class='relative grid w-full grid-cols-1 my-2 font-normal'>
 	<div class='py-24 text-gray-800 bg-fixed bg-gradient-to-br from-white to-gray-200'>
 		<div class='grid max-w-5xl gap-3 mx-auto md:grid-cols-2'>
 			<div data-aos='fade-right'>
-				<img
-					src='/static/images/weiven-objectives.png'
+				<Image
+					src={WeivenObjetivesImage}
 					alt='Cámara de la Industria del Software'
 					class='h-full object-fill w-full'
+					loading='eager'
 				/>
 			</div>
 			<div class='px-6 text-left'>

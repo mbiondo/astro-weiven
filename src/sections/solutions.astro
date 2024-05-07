@@ -1,9 +1,15 @@
+---
+import { Image } from "astro:assets"
+import ServicesIcon from "@assets/images/icono-servicios.svg"
+import DevelopmentIcon from "@assets/images/icono-desarrollo.svg"
+---
+
 <div class=''>
 	<div class='py-24 text-gray-800 bg-white'>
 		<div class='grid max-w-5xl gap-3 mx-auto md:grid-cols-2'>
 			<div class='px-6 text-center flex flex-col items-center'>
 				<div class=''>
-					<img src='/static/images/icono-servicios.svg' width='150' height='208' alt='Diseño de servicios' />
+					<Image src={ServicesIcon} width='150' height='208' alt='Diseño de servicios' decoding='async' loading='eager' />
 				</div>
 				<h3 class='pt-2 mb-6 text-3xl font-bold text-gray-800'>Soluciones a medida</h3>
 				<div class='max-w-2xl mx-auto text-gray-800'>
@@ -17,7 +23,7 @@
 
 			<div class='px-6 text-center flex flex-col items-center'>
 				<div class=''>
-					<img src='/static/images/icono-desarrollo.svg' width='150' height='208' alt='Diseño de servicios' />
+					<Image src={DevelopmentIcon} width='150' height='208' alt='Diseño de servicios' decoding='async' loading='eager' />
 				</div>
 				<h3 class='pt-2 mb-6 text-3xl font-bold text-gray-800'>Data Centers</h3>
 				<div class='max-w-2xl mx-auto text-gray-800'>

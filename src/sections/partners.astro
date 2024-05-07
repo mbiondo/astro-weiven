@@ -1,3 +1,9 @@
+---
+import { Image } from "astro:assets"
+import AboutWeivenImage from "@assets/images/about-weiven.jpg"
+import LogoCessiImage from "@assets/images/cessi-software.jpg"
+---
+
 <div class='py-12 text-gray-900 bg-white'>
 	<div class='grid max-w-5xl gap-3 pt-24 mx-auto md:grid-cols-2' data-aos='fade-left'>
 		<div class='px-6 text-center md:text-left'>
@@ -15,12 +21,12 @@
 			</div>
 		</div>
 		<div class='relative overflow-hidden shadow-xl md:rounded-md'>
-			<img src='/static/images/about-weiven.jpg' alt='Cámara de la Industria del Software' class='object-fill h-full' />
+			<Image src={AboutWeivenImage} alt='Cámara de la Industria del Software' class='object-fill h-full' loading='eager' />
 		</div>
 	</div>
 	<div class='grid max-w-5xl gap-3 pt-24 mx-auto md:grid-cols-2' data-aos='fade-right'>
 		<div class='relative overflow-hidden shadow-xl md:rounded-md'>
-			<img src='/static/images/cessi-software.jpg' alt='Cámara de la Industria del Software' />
+			<Image src={LogoCessiImage} alt='Cámara de la Industria del Software' loading='eager' />
 		</div>
 		<div class='px-6 text-center md:text-left kush-center'>
 			<div class='max-w-xl mx-auto text-gray-800'>
@@ -34,7 +40,7 @@
 	</div>
 	<div class='relative hidden max-w-xl p-6 mx-auto mt-12 text-center bg-white shadow-xl md:rounded-md'>
 		<div class='mt-6'>
-			<img src='/static/images/logo-cessi.png' alt='Cámara de la Industria del Software' class='object-fill h-full' />
+			<Image src={LogoCessiImage} alt='Cámara de la Industria del Software' class='object-fill h-full' />
 		</div>
 		<h3 class='mt-6 text-lg text-gray-600'>
 			Somos socios de la Cámara de la Industria del Software y tenemos alianzas con las empresas nacionales más importantes del

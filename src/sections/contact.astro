@@ -1,5 +1,7 @@
 ---
 import Wave from "@components/wave.astro"
+import ServicesImage from "@assets/images/servicios.jpg"
+import { Image } from "astro:assets"
 ---
 
 <div
@@ -26,9 +28,42 @@ import Wave from "@components/wave.astro"
 		</button>
 	</div>
 	<div class='absolute inset-0 z-0 bg-gray-800 bg-opacity-50'>
-		<div class='opacity-10'>
-			<img src='/static/images/servicios.jpg' alt='Diseño de servicios' class='object-cover' />
+		<div class='opacity-10 image-container'>
+			<Image src={ServicesImage} alt='Diseño de servicios' class='fit-content' loading='eager' />
 		</div>
 	</div>
 	<Wave />
 </div>
+
+<style>
+	.fit-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		box-sizing: border-box;
+		padding: 0;
+		border: none;
+		margin: auto;
+		display: block;
+		width: 0;
+		height: 0;
+		min-width: 100%;
+		max-width: 100%;
+		min-height: 100%;
+		max-height: 100%;
+		object-fit: cover;
+	}
+	.image-container {
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		box-sizing: border-box;
+		margin: 0;
+	}
+</style>

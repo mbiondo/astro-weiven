@@ -1,5 +1,7 @@
 ---
 import Wave from "@components/wave.astro"
+import { Image } from "astro:assets"
+import ContactImage from "@assets/images/contacto.jpg"
 ---
 
 <div class='grid w-full grid-cols-1 text-white bg-gradient-to-r from-blue-900 to-blue-800 relative overflow-hidden min-h-[80vh]'>
@@ -21,7 +23,7 @@ import Wave from "@components/wave.astro"
 	<div class='absolute inset-0 z-0 bg-blue-900 bg-opacity-10'>
 		<div class='opacity-40'>
 			<div class='image-container'>
-				<img src='/static/images/contacto.jpg' alt='Diseño de servicios' class='fit-content' />
+				<Image src={ContactImage} alt='Diseño de servicios' class='fit-content' loading='eager' />
 			</div>
 		</div>
 	</div>

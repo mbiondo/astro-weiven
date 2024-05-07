@@ -1,7 +1,12 @@
+---
+import { Image } from "astro:assets"
+import WeivenVerticalImage from "@assets/images/weiven-vertical.png"
+---
+
 <footer class='flex flex-col items-center justify-center w-full pt-6 mx-auto mb-8'>
 	<div class='w-full kush-center'>
 		<a class='block mt-1 hover:opacity-80' href='/'>
-			<img src='/static/images/weiven-vertical.png' width='150' height='70' alt='Weiven' />
+			<Image src={WeivenVerticalImage} width='150' height='70' alt='Weiven' loading='eager' />
 		</a>
 	</div>
 </footer>
