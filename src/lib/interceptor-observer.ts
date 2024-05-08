@@ -1,13 +1,13 @@
-const navigation = document.getElementById('navigation')
-const sections = [...document.querySelectorAll('section')]
+const navigation: HTMLElement | null = document.getElementById('navigation')
+const sections: HTMLElement[] = [...document.querySelectorAll('section')]
 
-const handleObserver = (entries: IntersectionObserverEntry[]) => {
+const handleObserver = (entries: IntersectionObserverEntry[]): void => {
   if (navigation === null) return
   entries.forEach((entry) => {
     const { id } = entry.target
     if (!id) return
 
-    const navItem = navigation.querySelector(`[href="#${id}"`)
+    const navItem: HTMLAnchorElement | null = navigation.querySelector(`[href="#${id}"`)
 
     if (!navItem) return
 
@@ -19,7 +19,7 @@ const handleObserver = (entries: IntersectionObserverEntry[]) => {
   })
 }
 
-const observer = new IntersectionObserver(handleObserver, {
+const observer: IntersectionObserver = new IntersectionObserver(handleObserver, {
   rootMargin: '-15% 0% -85% 0%',
   root: document,
 })
