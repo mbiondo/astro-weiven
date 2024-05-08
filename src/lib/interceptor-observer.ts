@@ -18,7 +18,7 @@ const spyItem = (entries: IntersectionObserverEntry[]) => {
 }
 
 const observer = new IntersectionObserver(spyItem, {
-	rootMargin: "-10% 0% -90% 0%",
+	rootMargin: "-5% 0% -90% 0%",
 	root: document,
 })
 

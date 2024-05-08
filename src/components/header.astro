@@ -14,7 +14,7 @@ const sections = [
 ---
 
 <header class='sticky z-50 top-0 bg-white w-full border shadow-lg'>
-	<div class='lg:flex justify-between p-5 gap-5 lg:mx-auto lg:w-3/5'>
+	<div class='lg:flex justify-between p-5 gap-5 lg:mx-auto lg:w-4/5'>
 		<Astronav closeOnClick>
 			<div class='flex w-full lg:w-auto justify-between'>
 				<a class='block hover:opacity-80' href='/'>
@@ -25,7 +25,7 @@ const sections = [
 				</div>
 			</div>
 			<MenuItems class='hidden lg:flex'>
-				<ul class='flex flex-col pt-10 gap-5 lg:flex-row lg:gap-5 lg:pt-0 font-semibold' id='navigation'>
+				<ul class='flex flex-col pt-10 gap-5 lg:flex-row lg:gap-5 lg:pt-0 font-semibold lg:text-sm' id='navigation'>
 					{
 						sections.map(({ id, name }) => (
 							<li>
