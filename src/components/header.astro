@@ -29,7 +29,7 @@ const sections = [
 					{
 						sections.map(({ id, name }) => (
 							<li>
-								<a href={`#${id}`} class='hover:text-blue-500'>
+								<a href={`#${id}`} class='hover:text-blue-300 transition-colors'>
 									{name}
 								</a>
 							</li>
@@ -43,6 +43,6 @@ const sections = [
 
 <style>
 	.active {
-		@apply text-blue-500;
+		@apply text-blue-300 font-bold border-b-2 border-blue-300;
 	}
 </style>

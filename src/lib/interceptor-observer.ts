@@ -1,7 +1,7 @@
 const navigation = document.getElementById("navigation")
 const sections = [...document.querySelectorAll("section")]
 
-const spyItem = (entries: IntersectionObserverEntry[]) => {
+const handleObserver = (entries: IntersectionObserverEntry[]) => {
 	entries.forEach((entry) => {
 		const { id } = entry.target
 		if (navigation === null) return
@@ -17,8 +17,8 @@ const spyItem = (entries: IntersectionObserverEntry[]) => {
 	})
 }
 
-const observer = new IntersectionObserver(spyItem, {
-	rootMargin: "-5% 0% -90% 0%",
+const observer = new IntersectionObserver(handleObserver, {
+	rootMargin: "-15% 0% -85% 0%",
 	root: document,
 })
 
