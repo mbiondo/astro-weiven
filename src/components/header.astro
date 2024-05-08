@@ -2,6 +2,15 @@
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar"
 import { Image } from "astro:assets"
 import LogoImage from "@assets/images/logo.svg"
+
+const sections = [
+	{ id: "about", name: "Quienes Somos" },
+	{ id: "services", name: "Servicios" },
+	{ id: "solutions", name: "Soluciones" },
+	{ id: "partners", name: "Socios" },
+	{ id: "objetives", name: "Objetivos" },
+	{ id: "contact", name: "Contacto" },
+]
 ---
 
 <header class='sticky z-50 top-0 bg-white w-full border shadow-lg'>
@@ -16,18 +25,24 @@ import LogoImage from "@assets/images/logo.svg"
 				</div>
 			</div>
 			<MenuItems class='hidden lg:flex'>
-				<ul class='flex flex-col pt-10 gap-5 lg:flex-row lg:gap-5 lg:pt-0 font-semibold'>
-					<li>
-						<a href='#services'>Servicios</a>
-					</li>
-					<li>
-						<a href='#about'>Quienes Somos</a>
-					</li>
-					<li>
-						<a href='#contact'>Contacto</a>
-					</li>
+				<ul class='flex flex-col pt-10 gap-5 lg:flex-row lg:gap-5 lg:pt-0 font-semibold' id='navigation'>
+					{
+						sections.map(({ id, name }) => (
+							<li>
+								<a href={`#${id}`} class='hover:text-blue-500'>
+									{name}
+								</a>
+							</li>
+						))
+					}
 				</ul>
 			</MenuItems>
 		</Astronav>
 	</div>
 </header>
+
+<style>
+	.active {
+		@apply text-blue-500;
+	}
+</style>

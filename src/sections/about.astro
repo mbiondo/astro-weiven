@@ -3,7 +3,7 @@ import { Image } from "astro:assets"
 import WeivenVerticalImage from "@assets/images/weiven-vertical.png"
 ---
 
-<div class='grid w-full grid-cols-1 text-gray-800 bg-white bg-gradient-to-br relative overflow-hidden min-h-[80vh]'>
+<section class='grid w-full grid-cols-1 text-gray-800 bg-white bg-gradient-to-br relative overflow-hidden min-h-[80vh]' id='about'>
 	<div class='mt-12 flex items-center justify-center' id='about' data-aos='fade-up'>
 		<Image src={WeivenVerticalImage} width='150' height='70' alt='Weiven' decoding='async' loading='eager' />
 	</div>
@@ -13,4 +13,4 @@ import WeivenVerticalImage from "@assets/images/weiven-vertical.png"
 	</p>
 
 	<div class='hidden md:block'></div>
-</div>
+</section>
