@@ -49,17 +49,13 @@ const meta = {
 		<meta name='theme-color' content='#ffffff' />
 		<ViewTransitions />
 	</head>
-	<body>
-		<script>
-			import { aosInit } from "@lib/aos"
-			aosInit()
-			document.addEventListener("astro:after-swap", aosInit)
-		</script>
+	<body class='bg-white'>
 		<Header />
 		<main transition:animate='initial' class='flex flex-col justify-center bg-white'>
 			<slot />
 		</main>
 		<Footer />
-		<script src="../lib/interceptor-observer.ts"></script>
+		<script src='@lib/aos.js'></script>
+		<script src='@lib/interceptor-observer.ts'></script>
 	</body>
 </html>
